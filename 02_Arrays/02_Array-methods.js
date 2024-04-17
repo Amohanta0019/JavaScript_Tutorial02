@@ -23,7 +23,7 @@ const realArr = arr2.flat(Infinity)
 // console.log(Array.isArray("ahana"));// false
 // console.log(Array.from("ahana"));//[ 'a', 'h', 'a', 'n', 'a' ]
 
-// console.log(Array.from({name:"ahana"}));//[] ... can't understand what to give so empty array as op
+console.log(Array.from({name:"ahana"}));//[] ... can't understand what to give so empty array as op
 
 
 
