@@ -18,10 +18,23 @@ this gives reference to current object
 { uname: 'ahana', price: 9999, welcomeMsg: [Function: welcomeMsg] }
 { uname: 'mamata', price: 9999, welcomeMsg: [Function: welcomeMsg] }
 */
-console.log(this); //{} empty object
-console.log("ahana");
+// console.log(this); //{} empty object
 
+/*
+function fun1(params) {
+    let uname = "ahana"
+    console.log(this);
+    // console.log(this.uname); undefined
+}
+fun1() 
+*/
 
+const fun1 = (params) => {
+    let uname = "ahana"
+    console.log(this); // {}
+    // console.log(this.uname); undefined
+}
+fun1()
 
 
 
