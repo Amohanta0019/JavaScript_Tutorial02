@@ -33,7 +33,7 @@ let myTimeStamp = Date.now()
 
 let newDate = new Date()
 // console.log(newDate.getTimezoneOffset()); //0
-// console.log(newDate.getVarDate); //undefined
+console.log(newDate.getVarDate); //undefined
 
 
 
