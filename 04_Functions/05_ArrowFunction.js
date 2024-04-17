@@ -34,12 +34,25 @@ const fun1 = (params) => {
     console.log(this); // {}
     // console.log(this.uname); undefined
 }
-fun1()
+// fun1()
+
+const addTwo = (num1, num2) => {
+    return num1+num2
+}
+
+console.log(addTwo(3,4));//7
+
+// implicit arrow function 
+const addThree = (num1, num2, num3) =>  (num1+num2+num3)
+console.log( addThree(1,2,3));// 6
+
+//object return chaile take paranthesis e wrap kortei hbe
+const objectParanthesis = (num1) => {uname : "ahana"}
+console.log(objectParanthesis(1)); // undefined
 
 
-
-
-
+const objectParanthesis1 = (num1) => ({uname : "ahana"})
+console.log(objectParanthesis(1)); // { uname: 'ahana' }
 
 
 
