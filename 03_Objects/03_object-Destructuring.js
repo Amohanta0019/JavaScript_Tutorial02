@@ -10,7 +10,7 @@ const course = {
 // console.log(instructor);//abc
 
 const {instructor : i} = course // giving short name
-// console.log(i);//abc
+console.log(i);//abc
 
 
 
