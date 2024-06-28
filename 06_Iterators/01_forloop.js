@@ -39,7 +39,7 @@ for (let index = 0; index < myArr.length; index++) {
     console.log(element);
     
 }
-  
+
 
 
 

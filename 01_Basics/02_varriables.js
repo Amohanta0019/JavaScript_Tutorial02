@@ -1,4 +1,5 @@
 const  accountId = 144553
+// accountId = 9 //TypeError: Assignment to constant variable.
 // constant data-type , can't change
 
 // can declare a variable as let or var
@@ -9,7 +10,7 @@ accountCity = "kolkata"
 
 let accountState
 //not assign a value , so undefined 
-// accountId = 9 //TypeError: Assignment to constant variable.
+
 accountEmail = "mohanta@aot.com"
 accountCity = "london"
 console.log(accountId);
