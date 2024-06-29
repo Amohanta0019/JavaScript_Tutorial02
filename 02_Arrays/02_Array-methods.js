@@ -2,15 +2,27 @@ const marvel = ['iron-man', 'captain america', 'thor']
 
 const dc = ['superman','batman','flash']
 
+//push:-
+//=======
 // marvel.push(dc)
 // console.log(marvel);//['iron-man','captain america','thor',[ 'superman', 'batman', 'flash' ]] .... 2-D array not concatenation of arrays
 
 // console.log(marvel[3]); //[ 'superman', 'batman', 'flash' ]
 // console.log(marvel[3][0]); // superman
 
+
+
+
+//concat:-
+//=========
 // const mixed = marvel.concat(dc)
 // console.log(mixed);//['iron-man', 'captain america', 'thor','superman','batman','flash']
 
+
+
+
+//Spread Operator(...):-
+//=====================
 const mixed = [...marvel , ...dc]
 // console.log(mixed);//['iron-man', 'captain america', 'thor','superman','batman','flash']
 

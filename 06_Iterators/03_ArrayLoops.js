@@ -114,7 +114,7 @@ function print(item) {
 // coding.forEach(print);
 
 
-// forEach loop in array of objects [used in databas]
+// forEach loop in array of objects [used in database]
 const languages = [
     {
         langName : "javascript",

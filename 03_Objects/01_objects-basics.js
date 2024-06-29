@@ -16,7 +16,7 @@ const juser = {
 }
 
 //name1 --> "name1" processed as sting literal
-// console.log( juser.mail);//ahana@google.com
+// console.log(juser.mail);//ahana@google.com
 // console.log( juser["mail"]);//ahana@google.com
 
 // console.log(juser.full name); //error
@@ -39,16 +39,16 @@ juser.mail = "mohanta@microsoft.com"
 
 
 juser.greeting = function(params) {
-    console.log("good night!!!");
+    // console.log("good night!!!");
 }
 // console.log(juser.greeting);//[Function (anonymous)]
-console.log(juser.greeting());//good night!!! undefined
+// console.log(juser.greeting());//good night!!! undefined
 
 
 juser.greeting1 = function(params) {
-    console.log(`good night!!! , ${this.name1}`);
+    // console.log(`good night!!! , ${this.name1}`);
 }
-console.log(juser.greeting1());//good night!!! , ahana undefined
+// console.log(juser.greeting1());//good night!!! , ahana undefined
 
 
 
