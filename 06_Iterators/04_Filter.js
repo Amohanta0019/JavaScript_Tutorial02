@@ -18,6 +18,13 @@ const values1 = coding.forEach(
 )
 // console.log(values1); //undefined
 
+
+
+
+
+
+
+// when we want to get something back from loop with some conditions then use filter
 const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newnums = mynums.filter(
     (num) => num > 4
@@ -26,7 +33,8 @@ const newnums = mynums.filter(
 
 const newnums1 = mynums.filter(
     (num) => { return num > 4 }
-)//here return keyword is important as it is inside a {}, so it has a scope, from scope if we want back something we have to write return
+)
+//here return keyword is important as it is inside a {}, so it has a scope, from scope if we want back something we have to write return
 // console.log(newnums1);
 
 
@@ -45,6 +53,7 @@ mynums.forEach(
 //*****************************************************************************
 
 //filter more examples:-
+//=======================
 const books = [
     { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
     { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
