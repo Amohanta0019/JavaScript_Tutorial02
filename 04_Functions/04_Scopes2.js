@@ -20,25 +20,46 @@ if (true) {
     const uname = "ahana"
     if (uname == "ahana ") {
         const website = "whatsapp"
-        console.log(uname+website);
+        // console.log(uname+website);
     }
     // console.log(website);
 }
 // console.log(uname);
 
 
-//+-+-+-+-+-+-+-+-+-+- INTERESTING +-+-+-+-+-+-+-+-+-+-
+//+-+-+-+-+-+-+-+-+-+- HOISTING +-+-+-+-+-+-+-+-+-+-
 
-console.log(add1(2));  //3 in case of func declaration er agei result chaitei pari
+//hoisting means using a variable or function or class even before declaring it
+//it is only applicable on var and declaration not const/let/expressions
+
+
+console.log(add1(2));  //3 in case of func ,declaration er agei result chaitei pari
 function add1(num) {
     return num + 1
 }
-console.log(add1(5));  //6
+// console.log(add1(5));  //6
+
+// console.log(a); //undefined [does not give error coz of hoisting]
+var a;
+a = 9;
+// console.log(a); //9
+
+
+//hoisting is not applicable on const & let 
+//-----------------------------------------
+// console.log(b);
+// const b; //error :- Missing initializer in const declaration
+
+// console.log(c); //ReferenceError: Cannot access 'c' before initialization
+// let c;
 
 
 
+//hoisting is not applicable on class & function expression:-
+//--------------------------------------------------------------------
 // console.log(add2(2)); // error as in case of add2 ami add2 func er return value ke ekta variable e store kor66i , var declare/initialize korar age result access korte parbo na.
-const add2 = function (num) {
+//TypeError: add2 is not a function
+var add2 = function (num) {
     return num + 2
 }
 console.log(add2(5)); 
