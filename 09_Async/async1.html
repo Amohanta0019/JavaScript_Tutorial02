@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ahana Mohanta</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    console.log("ahana");
+    const title = function(){
+        console.log("mohanta");
+    }
+    setTimeout(title,3000);
+
+    //cahnge heading after 2ms
+    const changeH1  = function(){
+        document.querySelector('h1').innerHTML = "best developer"
+    }
+    const changeMe = setTimeout(changeH1,2000);
+
+    //for some reason if I want to stop the setTimeout() I can use clearTimeout(),,, for exm. stop button e 2ms er age click korle heading "Ahana Mohanta" i theke jabe ar "best developer" hbe na,,,clearTimeout() je setTimeout ke atkabe tar reference nebe
+
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearTimeout(changeMe);
+        console.log("stopped");
+    })
+
+
+</script>
+</html>
