@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black; color: beige;">
+    <h1>Github Info</h1>
+    <button id="Informations">Informations</button>
+    <p id="username">uname</p>
+    <br>
+    <p id="pfp1">pfp</p>
+    <br>
+    <p id="followers1">Followers</p>
+    <script>
+        const requestURL = 'https://api.github.com/users/Amohanta0019'
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestURL)
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const data1 = JSON.parse(this.responseText)
+                // console.log(typeof data1);//string
+                document.getElementById('username').textContent = data1.name;
+
+                var img = document.createElement("img")
+                img.src = data1.avatar_url;
+                document.getElementById('pfp1').appendChild(img)
+
+                document.getElementById('followers1').textContent = data1.followers;
+            }
+        };
+
+        document.getElementById('Informations').addEventListener('click', function () {
+            xhr.send()
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: antiquewhite;">
+    0 UNSENT Client has been created. open() not called yet.
+    <br>
+    1 OPENED open() has been called.
+    <br>
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    <br>
+    3 LOADING Downloading; responseText holds partial data.
+    <br>
+    4 DONE The operation is complete.
+    <br>
+
+</body>
+<script>
+    const requestURL = 'https://api.github.com/users/Amohanta0019'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestURL)
+    xhr.onreadystatechange = function () { //onreadystate is used to check state continuously
+        console.log(xhr.readyState); // 2,3,4
+        if (xhr.readyState === 3) {
+            
+            const data = this.responseText;
+            console.log(typeof data);//string
+            // console.log(data1.name); //undefined
+
+            const data1 = JSON.parse(this.responseText)
+            //we treat data as object here but in reality data is of String type ,,, so convert it into object,,, actually data comes in form of json , so JSON(data)  korte hbe not Object(data)
+          
+            console.log(typeof data1);//string
+            console.log(data1.name); //AhanaMohanta
+        }
+    }
+    // console.log("here");
+
+    xhr.send()
+</script>
+
+</html>
